@@ -4,24 +4,30 @@
   const header = qs('[data-header]');
   const missionForm = qs('#missionForm');
   const contactForm = qs('#contactForm');
-  const partnerForm = qs('#partnerForm');
+  const agencyForm = qs('#agencyForm');
+  const brokerForm = qs('#brokerForm');
   const missionText = qs('#missionText');
   const missionPreview = qs('#missionPreview');
   const missionSuccess = qs('#missionSuccess');
   const missionStatus = qs('#missionStatus');
-  const partnerStatus = qs('#partnerStatus');
+  const agencyStatus = qs('#agencyStatus');
+  const brokerStatus = qs('#brokerStatus');
   const stepLabel = qs('[data-step="1"]');
   let mission = '';
 
-  const revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  qsa('.reveal').forEach(el => revealObserver.observe(el));
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    qsa('.reveal').forEach(el => revealObserver.observe(el));
+  } else {
+    qsa('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
 
   window.addEventListener('scroll', () => {
     header?.classList.toggle('is-scrolled', window.scrollY > 80);
@@ -38,7 +44,7 @@
     event.preventDefault();
     mission = missionText.value.trim();
     if (mission.length < 20) {
-      missionText.setCustomValidity('Conte um pouco mais sobre o imóvel que você procura.');
+      missionText.setCustomValidity('Descreva um pouco mais a sua busca.');
       missionText.reportValidity();
       missionText.setCustomValidity('');
       return;
@@ -74,39 +80,61 @@
     const payload = Object.fromEntries(new FormData(contactForm).entries());
     payload.mission = mission;
     payload.source = 'landing';
-    setBusy(button, true, 'Ativando missão...');
+    setBusy(button, true, 'Ativando...');
     missionStatus.textContent = '';
     try {
       const response = await send('/api/mission.php', payload);
-      if (!response.ok) throw new Error(response.error || 'Não foi possível ativar sua missão agora.');
+      if (!response.ok) throw new Error(response.error || 'Não foi possível ativar a missão.');
       contactForm.classList.add('is-hidden');
       missionSuccess.classList.remove('is-hidden');
     } catch (error) {
       missionStatus.textContent = error.message;
     } finally {
-      setBusy(button, false, 'Ativar missão');
+      setBusy(button, false, 'Ativar missão', '→');
     }
   });
 
-  partnerForm?.addEventListener('submit', async event => {
-    event.preventDefault();
-    if (!partnerForm.reportValidity()) return;
-    const button = qs('button[type="submit"]', partnerForm);
-    const payload = Object.fromEntries(new FormData(partnerForm).entries());
-    payload.source = 'landing_partner';
-    setBusy(button, true, 'Enviando solicitação...');
-    partnerStatus.textContent = '';
-    try {
-      const response = await send('/api/partner.php', payload);
-      if (!response.ok) throw new Error(response.error || 'Não foi possível enviar sua solicitação agora.');
-      partnerForm.reset();
-      partnerStatus.textContent = 'Solicitação recebida. A ImobiData entrará em contato quando houver aderência comercial.';
-    } catch (error) {
-      partnerStatus.textContent = error.message;
-    } finally {
-      setBusy(button, false, 'Solicitar acesso', '↗');
-    }
+  bindCommercialForm({
+    form: agencyForm,
+    status: agencyStatus,
+    endpoint: '/api/agency.php',
+    source: 'landing_agency',
+    busyLabel: 'Enviando...',
+    idleLabel: 'Cadastrar imobiliária',
+    success: 'Recebido. A ImobiData registrou o perfil institucional da sua imobiliária.'
   });
+
+  bindCommercialForm({
+    form: brokerForm,
+    status: brokerStatus,
+    endpoint: '/api/broker.php',
+    source: 'landing_broker',
+    busyLabel: 'Enviando...',
+    idleLabel: 'Cadastrar perfil',
+    success: 'Recebido. Seu perfil profissional entrou no radar de missões da ImobiData.'
+  });
+
+  function bindCommercialForm({ form, status, endpoint, source, busyLabel, idleLabel, success }) {
+    form?.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const button = qs('button[type="submit"]', form);
+      const payload = Object.fromEntries(new FormData(form).entries());
+      payload.source = source;
+      setBusy(button, true, busyLabel);
+      status.textContent = '';
+      try {
+        const response = await send(endpoint, payload);
+        if (!response.ok) throw new Error(response.error || 'Não foi possível enviar agora.');
+        form.reset();
+        status.textContent = success;
+      } catch (error) {
+        status.textContent = error.message;
+      } finally {
+        setBusy(button, false, idleLabel, '↗');
+      }
+    });
+  }
 
   async function send(url, payload) {
     const response = await fetch(url, {
@@ -120,10 +148,10 @@
     return data;
   }
 
-  function setBusy(button, busy, label, arrow = '→') {
+  function setBusy(button, busy, label, arrow = '') {
     if (!button) return;
     button.disabled = busy;
-    button.style.opacity = busy ? '.62' : '1';
-    button.innerHTML = busy ? label : `${label} <span>${arrow}</span>`;
+    button.style.opacity = busy ? '.65' : '1';
+    button.innerHTML = arrow ? `${label} <span>${arrow}</span>` : label;
   }
 })();
