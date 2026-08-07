@@ -16,20 +16,47 @@ CREATE TABLE IF NOT EXISTS missions (
   KEY ix_missions_whatsapp (whatsapp)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-CREATE TABLE IF NOT EXISTS partner_leads (
+CREATE TABLE IF NOT EXISTS agency_leads (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   company VARCHAR(160) NOT NULL,
   contact_name VARCHAR(120) NOT NULL,
+  role_title VARCHAR(120) NULL,
   whatsapp VARCHAR(40) NOT NULL,
+  email VARCHAR(180) NULL,
   region VARCHAR(180) NOT NULL,
-  profile TEXT NULL,
-  source VARCHAR(60) NOT NULL DEFAULT 'landing_partner',
+  portfolio_profile TEXT NULL,
+  team_size VARCHAR(60) NULL,
+  integration_interest VARCHAR(60) NULL,
+  source VARCHAR(60) NOT NULL DEFAULT 'landing_agency',
   consent_at DATETIME NOT NULL,
   ip_address VARCHAR(64) NULL,
   user_agent VARCHAR(500) NULL,
   created_at DATETIME NOT NULL,
   PRIMARY KEY (id),
-  KEY ix_partner_created_at (created_at),
-  KEY ix_partner_company (company),
-  KEY ix_partner_whatsapp (whatsapp)
+  KEY ix_agency_created_at (created_at),
+  KEY ix_agency_company (company),
+  KEY ix_agency_whatsapp (whatsapp)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS broker_leads (
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(120) NOT NULL,
+  whatsapp VARCHAR(40) NOT NULL,
+  email VARCHAR(180) NULL,
+  creci VARCHAR(60) NULL,
+  city VARCHAR(120) NOT NULL,
+  neighborhoods VARCHAR(500) NULL,
+  segments VARCHAR(500) NULL,
+  price_range VARCHAR(160) NULL,
+  collaboration_profile TEXT NULL,
+  source VARCHAR(60) NOT NULL DEFAULT 'landing_broker',
+  consent_at DATETIME NOT NULL,
+  ip_address VARCHAR(64) NULL,
+  user_agent VARCHAR(500) NULL,
+  created_at DATETIME NOT NULL,
+  PRIMARY KEY (id),
+  KEY ix_broker_created_at (created_at),
+  KEY ix_broker_name (name),
+  KEY ix_broker_whatsapp (whatsapp),
+  KEY ix_broker_city (city)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
