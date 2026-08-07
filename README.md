@@ -1,34 +1,43 @@
-# ImobiData Landing
+# ImobiData
 
-Landing page comercial da ImobiData, preparada para hospedagem tradicional CWP/Apache/PHP 8.3.
+Landing page comercial premium da **ImobiData**, uma iniciativa da **Megaweb Solutions**.
+
+## Posicionamento
+
+A ImobiData organiza o mercado imobiliário a partir da demanda. O visitante descreve o imóvel que procura, a plataforma estrutura uma Missão ImobiData e prepara essa demanda para pesquisa e priorização sobre a base imobiliária.
+
+## Produção
+
+- Host: `147.93.183.134`
+- Usuário: `idata`
+- DocumentRoot: `/home/idata/public_html`
+- Stack: Apache + PHP 8.3 + MariaDB
+- Empresa: Megaweb Solutions
 
 ## Estrutura
 
-- `index.php` — landing principal
-- `assets/` — CSS e JavaScript
-- `api/` — captura de missões e parceiros
-- `_app/` — bootstrap e configuração privada bloqueada pelo Apache
-- `_database/` — schema MariaDB bloqueado pelo Apache
-- `.htaccess` — HTTPS, hardening e proteção das pastas privadas
+```text
+index.php
+assets/
+  css/site.css
+  js/site.js
+api/
+  mission.php
+  partner.php
+_app/
+_database/
+.htaccess
+```
 
-## Servidor alvo
+## Princípios do MVP
 
-- host: `147.93.183.134`
-- usuário: `idata`
-- document root: `/home/idata/public_html`
-- PHP: 8.3 FPM
-- MariaDB: 10.5+
+- landing first;
+- experiência premium;
+- missão antes de cadastro;
+- demanda antes de oferta;
+- sem catálogo público;
+- sem filtros tradicionais;
+- captura de compradores e parceiros B2B;
+- camada visual separada do motor de mineração.
 
-## Deploy direto
-
-Clone o repositório diretamente em `/home/idata/public_html` ou sincronize seu conteúdo para esse diretório.
-
-1. Crie o banco e o usuário MariaDB pelo CWP.
-2. Importe `_database/schema.sql`.
-3. Copie `_app/config.example.php` para `_app/config.php`.
-4. Preencha as credenciais reais.
-5. Garanta `644` nos arquivos e `755` nos diretórios.
-6. Ative SSL do domínio.
-7. Teste `/`, `/api/mission.php` e `/api/partner.php`.
-
-`_app/config.php` está no `.gitignore` e não deve ser versionado.
+As áreas `_app` e `_database` são protegidas no Apache e não devem ser servidas publicamente.
