@@ -17,15 +17,15 @@
       label: 'MISSÃO IMOBIDATA',
       endpoint: '/api/mission.php',
       source: 'landing_conversation',
-      successTitle: 'Sua missão está ativa.',
-      successText: 'Agora existe uma demanda com contexto. A ImobiData pode continuar a busca a partir do que realmente importa para você.',
+      successTitle: 'Missão registrada.',
+      successText: 'Os critérios da busca foram salvos. O contato informado será usado para esta missão e oportunidades relacionadas.',
       steps: [
-        { key: 'mission', prompt: 'Qual imóvel faria sentido para você agora?', hint: 'Pode escrever como falaria com uma pessoa: região, preço, quartos, prazo, restrições...', multiline: true, min: 20 },
-        { key: 'name', prompt: 'Como posso chamar você?', hint: 'Seu primeiro nome já é suficiente.' },
-        { key: 'whatsapp', prompt: 'Qual WhatsApp devemos usar para continuar esta missão?', hint: 'Use DDD + número.' },
-        { key: 'email', prompt: 'Quer deixar um e-mail também?', hint: 'É opcional. Você pode pular esta etapa.', optional: true },
-        { key: 'consent', prompt: 'Posso usar esses dados somente para continuar sua missão e enviar oportunidades relacionadas?', options: [
-          { label: 'Sim, pode continuar', value: '1' },
+        { key: 'mission', prompt: 'Qual imóvel está procurando?', hint: 'Informe cidade ou região, faixa de preço, características, prazo e restrições relevantes.', multiline: true, min: 20 },
+        { key: 'name', prompt: 'Qual é o seu nome?', hint: 'Nome para identificação da missão.' },
+        { key: 'whatsapp', prompt: 'Qual WhatsApp deve receber as atualizações desta missão?', hint: 'DDD + número.' },
+        { key: 'email', prompt: 'Deseja informar um e-mail?', hint: 'Opcional.', optional: true },
+        { key: 'consent', prompt: 'Autoriza o uso desses dados para esta missão e oportunidades relacionadas?', options: [
+          { label: 'Sim, autorizo', value: '1' },
           { label: 'Não', value: '0' }
         ], requireYes: true }
       ]
@@ -34,20 +34,20 @@
       label: 'IMOBILIÁRIA',
       endpoint: '/api/agency.php',
       source: 'landing_agency_conversation',
-      successTitle: 'Sua operação entrou no radar.',
-      successText: 'A relação com imobiliárias é institucional. Entraremos em contato quando houver aderência de demanda ou oportunidade de integração.',
+      successTitle: 'Imobiliária registrada.',
+      successText: 'Os dados institucionais foram salvos para análise de demanda, cobertura e possíveis integrações.',
       steps: [
-        { key: 'company', prompt: 'Qual é o nome da imobiliária?', hint: 'Razão comercial ou marca.' },
-        { key: 'name', prompt: 'Com quem devemos falar nessa operação?', hint: 'Nome do responsável comercial ou institucional.' },
-        { key: 'region', prompt: 'Onde a imobiliária tem cobertura real?', hint: 'Cidade, bairros, litoral, região metropolitana...' },
-        { key: 'team_size', prompt: 'Qual é o tamanho aproximado da equipe comercial?', options: [
-          { label: '1–5', value: '1–5' }, { label: '6–15', value: '6–15' }, { label: '16–40', value: '16–40' }, { label: '41+', value: '41+' }, { label: 'Prefiro não informar', value: '' }
+        { key: 'company', prompt: 'Qual é o nome da imobiliária?', hint: 'Nome comercial ou razão social.' },
+        { key: 'name', prompt: 'Quem responde por este contato?', hint: 'Nome do responsável.' },
+        { key: 'region', prompt: 'Qual região a operação atende?', hint: 'Cidade, bairros ou área de cobertura.' },
+        { key: 'team_size', prompt: 'Qual é o tamanho da equipe comercial?', options: [
+          { label: '1–5', value: '1–5' }, { label: '6–15', value: '6–15' }, { label: '16–40', value: '16–40' }, { label: '41+', value: '41+' }, { label: 'Não informar', value: '' }
         ], optional: true },
-        { key: 'integration_interest', prompt: 'O que faz mais sentido para a imobiliária neste momento?', options: [
-          { label: 'Receber demandas qualificadas', value: 'demand' }, { label: 'Explorar integração futura', value: 'integration' }, { label: 'Os dois', value: 'both' }
+        { key: 'integration_interest', prompt: 'Qual relação interessa neste momento?', options: [
+          { label: 'Receber demandas', value: 'demand' }, { label: 'Avaliar integração', value: 'integration' }, { label: 'Ambas', value: 'both' }
         ] },
-        { key: 'whatsapp', prompt: 'Qual WhatsApp institucional devemos usar?', hint: 'Pode ser do responsável ou da operação.' },
-        { key: 'consent', prompt: 'Podemos entrar em contato sobre demandas e possíveis integrações?', options: [
+        { key: 'whatsapp', prompt: 'Qual WhatsApp deve receber o contato institucional?', hint: 'DDD + número.' },
+        { key: 'consent', prompt: 'Autoriza contato sobre demandas e possíveis integrações?', options: [
           { label: 'Sim, autorizo', value: '1' }, { label: 'Não', value: '0' }
         ], requireYes: true }
       ]
@@ -56,17 +56,17 @@
       label: 'INDEXAÇÃO DE CORRETOR',
       endpoint: '/api/broker.php',
       source: 'landing_broker_index',
-      successTitle: 'Suas fontes entraram na fila de indexação.',
-      successText: 'A ImobiData vai analisar as fontes indicadas, identificar os imóveis disponíveis e preparar esse estoque para cruzamento com missões compatíveis. A coleta efetiva depende da disponibilidade técnica e das políticas de acesso de cada fonte.',
+      successTitle: 'Fontes recebidas.',
+      successText: 'Os endereços informados foram registrados para análise. A indexação efetiva depende da disponibilidade técnica e das condições de acesso de cada fonte.',
       steps: [
-        { key: 'name', prompt: 'Como você se chama?', hint: 'Nome profissional.' },
-        { key: 'creci', prompt: 'Quer informar seu CRECI?', hint: 'Opcional nesta etapa.', optional: true },
-        { key: 'source_urls', prompt: 'Onde seus imóveis já estão publicados?', hint: 'Cole um ou mais links: seu perfil em portais, seu site ou sua página no site da imobiliária. Um link por linha.', multiline: true, min: 8 },
-        { key: 'indexing_authorization', prompt: 'Você confirma que essas fontes são públicas e autoriza a ImobiData a analisá-las para identificar seus imóveis e cruzá-los com missões compatíveis?', options: [
-          { label: 'Sim, autorizo a análise', value: '1' }, { label: 'Não', value: '0' }
+        { key: 'name', prompt: 'Qual é o seu nome?', hint: 'Nome profissional.' },
+        { key: 'creci', prompt: 'Deseja informar o CRECI?', hint: 'Opcional.', optional: true },
+        { key: 'source_urls', prompt: 'Em quais endereços seus imóveis são publicados?', hint: 'Cole um ou mais links: perfil em portal, site próprio ou página no site da imobiliária. Um link por linha.', multiline: true, min: 8 },
+        { key: 'indexing_authorization', prompt: 'Autoriza a ImobiData a analisar essas fontes públicas para identificar os anúncios vinculados ao seu perfil?', options: [
+          { label: 'Sim, autorizo', value: '1' }, { label: 'Não', value: '0' }
         ], requireYes: true },
-        { key: 'whatsapp', prompt: 'Qual WhatsApp devemos usar para falar com você quando houver uma missão compatível?', hint: 'DDD + número.' },
-        { key: 'consent', prompt: 'Podemos entrar em contato sobre a indexação e oportunidades relacionadas às missões?', options: [
+        { key: 'whatsapp', prompt: 'Qual WhatsApp deve receber contatos sobre missões compatíveis?', hint: 'DDD + número.' },
+        { key: 'consent', prompt: 'Autoriza contato sobre a indexação e missões relacionadas?', options: [
           { label: 'Sim, autorizo', value: '1' }, { label: 'Não', value: '0' }
         ], requireYes: true }
       ]
@@ -178,8 +178,8 @@
     }
     if (step.min && value.length < step.min) {
       addMessage('assistant', state.type === 'broker' && step.key === 'source_urls'
-        ? 'Envie pelo menos um link completo onde seus imóveis estão publicados.'
-        : 'Conte um pouco mais. Quanto melhor o contexto, melhor a missão.');
+        ? 'Informe pelo menos um endereço válido onde os imóveis são publicados.'
+        : 'A descrição está curta. Inclua cidade ou região, faixa de preço ou características essenciais.');
       input.focus();
       return;
     }
@@ -191,7 +191,7 @@
     if (!step) return;
     if (step.requireYes && value !== '1') {
       addMessage('user', visibleValue);
-      showTyping(() => addMessage('assistant', 'Sem autorização eu não salvo seus dados. Você pode fechar esta conversa sem enviar nada.'));
+      showTyping(() => addMessage('assistant', 'Sem autorização, os dados não serão enviados. A conversa pode ser fechada sem registro.'));
       composer.classList.add('is-disabled');
       quickReplies.innerHTML = '';
       return;
@@ -211,19 +211,19 @@
       const payload = { ...state.data, source: state.flow.source };
       const result = await send(state.flow.endpoint, payload);
       removeTyping();
-      if (!result.ok) throw new Error(result.error || 'Não foi possível concluir agora.');
+      if (!result.ok) throw new Error(result.error || 'Não foi possível concluir o envio.');
       conversation.innerHTML = `
         <div class="conversation-success">
           <span class="eyebrow">CONCLUÍDO</span>
           <h3>${escapeHtml(state.flow.successTitle)}</h3>
           <p>${escapeHtml(state.flow.successText)}</p>
-          <button class="outline-button" type="button" id="conversationDone">Fechar conversa <b>×</b></button>
+          <button class="outline-button" type="button" id="conversationDone">Fechar <b>×</b></button>
         </div>`;
       $('#conversationDone')?.addEventListener('click', closeFlow);
       stepLabel.textContent = 'CONCLUÍDO';
     } catch (error) {
       removeTyping();
-      addMessage('assistant', `${error.message} Você pode tentar novamente agora.`);
+      addMessage('assistant', error.message);
       const retry = document.createElement('button');
       retry.type = 'button';
       retry.textContent = 'Tentar novamente';
