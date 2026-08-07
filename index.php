@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#080806">
-  <meta name="description" content="A ImobiData pesquisa anúncios imobiliários publicados em diferentes fontes a partir dos critérios informados pelo cliente e organiza as opções mais compatíveis com a busca.">
-  <meta property="og:title" content="ImobiData | Pesquisa imobiliária orientada por demanda">
+  <meta name="description" content="A ImobiData é uma plataforma de inteligência imobiliária com ciência de dados. Pesquisa anúncios publicados em diferentes fontes e organiza as opções mais compatíveis com cada busca.">
+  <meta property="og:title" content="ImobiData | Inteligência imobiliária com ciência de dados">
   <meta property="og:description" content="Descreva o imóvel que procura. A ImobiData pesquisa diferentes fontes do mercado e organiza as ofertas mais compatíveis com a sua busca.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://imobidata.com.br/">
-  <title>ImobiData | Pesquisa imobiliária orientada por demanda</title>
+  <title>ImobiData | Inteligência imobiliária com ciência de dados</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/assets/css/scroll-scenes.css?v=1">
   <link rel="stylesheet" href="/assets/css/indexing.css?v=1">
   <link rel="stylesheet" href="/assets/css/metric.css?v=1">
+  <link rel="stylesheet" href="/assets/css/review-fixes.css?v=1">
 </head>
 <body>
 <div class="site" id="top">
@@ -35,12 +36,12 @@
   <main>
     <section class="hero" data-snap="hero">
       <div class="hero-noise" aria-hidden="true"></div>
-      <div class="hero-meta reveal"><span>INTELIGÊNCIA IMOBILIÁRIA</span><span>JOINVILLE · SC</span></div>
+      <div class="hero-meta reveal"><span>INTELIGÊNCIA IMOBILIÁRIA COM CIÊNCIA DE DADOS</span><span>JOINVILLE · SC</span></div>
       <div class="hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">IMOBIDATA</p>
           <h1>Descreva o imóvel.<br><em>A ImobiData pesquisa o mercado.</em></h1>
-          <p class="hero-lead">Em vez de começar por um catálogo, a busca começa pelo que a pessoa realmente procura. A ImobiData recebe os critérios da compra, locação ou investimento, pesquisa anúncios publicados em diferentes fontes e organiza as opções que mais combinam com essa necessidade.</p>
+          <p class="hero-lead">A ImobiData usa ciência de dados para organizar informações de anúncios, histórico de mercado e critérios de busca. Em vez de começar por um catálogo, a pesquisa começa pelo imóvel que a pessoa procura e compara essa necessidade com ofertas publicadas em diferentes fontes.</p>
           <div class="hero-actions">
             <button class="gold-button" type="button" data-flow="mission">Criar uma missão <span>↗</span></button>
             <a class="quiet-link" href="#conceito">Entender como funciona <span>↓</span></a>
@@ -78,7 +79,7 @@
       <div class="mission-callout-copy reveal">
         <p class="eyebrow">MISSÃO IMOBIDATA</p>
         <h2>Explique o que está procurando<br><em>do jeito que explicaria a uma pessoa.</em></h2>
-        <p>Não é necessário preencher uma sequência de filtros. Basta descrever a necessidade com as informações importantes. Por exemplo: “Procuro apartamento em Joinville, de preferência no América ou Atiradores, até R$ 900 mil, com três quartos, duas vagas e sem interesse em unidades térreas”.</p>
+        <p>Não é necessário preencher uma sequência de filtros. Basta descrever a necessidade com as informações importantes. Por exemplo: “Procuro apartamento na cidade XXX, no país XXX, de preferência no bairro YYY, até R$ 900 mil, com três quartos, duas vagas e sem interesse em unidades térreas”.</p>
       </div>
       <button class="mission-launch reveal" type="button" data-flow="mission">
         <span>CRIAR MISSÃO</span><b>→</b>
@@ -147,9 +148,9 @@
   </main>
 
   <footer class="footer">
-    <div><a class="brand footer-brand" href="#top"><span>IMOBI</span><b>DATA</b></a><p>Pesquisa e inteligência de dados para o mercado imobiliário.</p></div>
+    <div><a class="brand footer-brand" href="#top"><span>IMOBI</span><b>DATA</b></a><p>Inteligência imobiliária com ciência de dados.</p></div>
     <div class="footer-company"><span>IMOBIDATA</span><strong>INTELIGÊNCIA IMOBILIÁRIA</strong><small>Joinville · Santa Catarina</small></div>
-    <p class="footer-legal">A ImobiData é uma plataforma de tecnologia e inteligência imobiliária. A plataforma pesquisa, organiza e relaciona informações de mercado e demandas de clientes. Quando houver atividade de intermediação imobiliária, ela será realizada separadamente por profissional ou empresa legalmente habilitados.</p>
+    <p class="footer-legal">A ImobiData é uma plataforma de inteligência imobiliária baseada em ciência de dados. A plataforma pesquisa, organiza e relaciona informações de anúncios, histórico de mercado e demandas de clientes. Quando houver atividade de intermediação imobiliária, ela será realizada separadamente por profissional ou empresa legalmente habilitados.</p>
     <div class="footer-bottom"><span>© <?= date('Y') ?> ImobiData. Todos os direitos reservados.</span><a href="#top">Voltar ao topo ↑</a></div>
   </footer>
 </div>
