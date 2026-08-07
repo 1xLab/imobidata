@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/site.css?v=4">
   <link rel="stylesheet" href="/assets/css/scroll-scenes.css?v=1">
+  <link rel="stylesheet" href="/assets/css/indexing.css?v=1">
 </head>
 <body>
 <div class="site" id="top">
@@ -110,15 +111,28 @@
       </div>
     </section>
 
-    <section class="broker" id="corretores" data-snap="corretores">
-      <div class="broker-mark reveal" aria-hidden="true"><span>LOCAL</span><span>KNOWLEDGE</span></div>
+    <section class="broker broker-indexing" id="corretores" data-snap="corretores">
+      <div class="index-source-visual reveal" aria-label="Fontes públicas de anúncios para indexação">
+        <span class="index-source-kicker">LISTING SOURCES</span>
+        <div class="source-stack">
+          <span>portal.com.br/corretor/seu-perfil</span>
+          <span>imobiliaria.com.br/corretor/seu-nome</span>
+          <span>seusite.com.br/imoveis</span>
+        </div>
+        <div class="index-source-foot"><span>INDEX</span><span>MAP</span><span>MATCH</span></div>
+      </div>
       <div class="broker-copy reveal">
         <p class="eyebrow">PARA CORRETORES</p>
-        <h2>Seu valor não é conhecer<br><em>todo o mercado.</em></h2>
-        <p>É saber profundamente onde e como você consegue gerar resultado. Cidade, bairros, segmento, faixa de preço e forma de colaboração definem quando a ImobiData deve chamar você.</p>
-        <button class="dark-button" type="button" data-flow="broker">Apresentar meu perfil <span>↗</span></button>
+        <h2>Você já anuncia.<br><em>Nós indexamos.</em></h2>
+        <p>Indique onde seus imóveis já estão publicados: seu perfil em portais, seu próprio site ou sua página no portal da imobiliária. A ImobiData passa a mapear essas fontes e pode cruzar os imóveis identificados com missões compatíveis.</p>
+        <button class="dark-button" type="button" data-flow="broker">Indicar onde anuncio <span>↗</span></button>
+        <p class="indexing-disclaimer">Você não precisa recadastrar imóvel por imóvel. A indexação depende da disponibilidade técnica e das políticas de acesso de cada fonte.</p>
       </div>
-      <div class="broker-note reveal"><span>NÃO É UMA IMOBILIÁRIA MENOR.</span><p>É outra unidade econômica, outra capacidade operacional e outra relação comercial.</p></div>
+      <div class="broker-note reveal">
+        <span>NÃO DESCREVA SEU ESTOQUE.</span>
+        <strong>Mostre onde ele já existe.</strong>
+        <p>Bairros, tipologias, faixa de preço e volume de oferta podem ser inferidos a partir dos próprios anúncios. O perfil comercial passa a ser observado, não declarado.</p>
+      </div>
     </section>
 
     <section class="closing reveal" data-snap="fechamento">
@@ -154,7 +168,7 @@
   </section>
 </div>
 
-<script src="/assets/js/site.js?v=4" defer></script>
+<script src="/assets/js/site.js?v=5" defer></script>
 <script src="/assets/js/scroll-scenes.js?v=1" defer></script>
 </body>
 </html>
