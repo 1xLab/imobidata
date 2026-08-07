@@ -20,7 +20,7 @@
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
   qsa('.reveal').forEach(el => revealObserver.observe(el));
 
   window.addEventListener('scroll', () => {
@@ -38,7 +38,7 @@
     event.preventDefault();
     mission = missionText.value.trim();
     if (mission.length < 20) {
-      missionText.setCustomValidity('Descreva um pouco mais a sua busca.');
+      missionText.setCustomValidity('Conte um pouco mais sobre o imóvel que você procura.');
       missionText.reportValidity();
       missionText.setCustomValidity('');
       return;
@@ -74,11 +74,11 @@
     const payload = Object.fromEntries(new FormData(contactForm).entries());
     payload.mission = mission;
     payload.source = 'landing';
-    setBusy(button, true, 'Ativando...');
+    setBusy(button, true, 'Ativando missão...');
     missionStatus.textContent = '';
     try {
       const response = await send('/api/mission.php', payload);
-      if (!response.ok) throw new Error(response.error || 'Não foi possível ativar a missão.');
+      if (!response.ok) throw new Error(response.error || 'Não foi possível ativar sua missão agora.');
       contactForm.classList.add('is-hidden');
       missionSuccess.classList.remove('is-hidden');
     } catch (error) {
@@ -94,17 +94,17 @@
     const button = qs('button[type="submit"]', partnerForm);
     const payload = Object.fromEntries(new FormData(partnerForm).entries());
     payload.source = 'landing_partner';
-    setBusy(button, true, 'Enviando...');
+    setBusy(button, true, 'Enviando solicitação...');
     partnerStatus.textContent = '';
     try {
       const response = await send('/api/partner.php', payload);
-      if (!response.ok) throw new Error(response.error || 'Não foi possível enviar agora.');
+      if (!response.ok) throw new Error(response.error || 'Não foi possível enviar sua solicitação agora.');
       partnerForm.reset();
-      partnerStatus.textContent = 'Recebido. Sua empresa entrou no radar de parcerias da ImobiData.';
+      partnerStatus.textContent = 'Solicitação recebida. A ImobiData entrará em contato quando houver aderência comercial.';
     } catch (error) {
       partnerStatus.textContent = error.message;
     } finally {
-      setBusy(button, false, 'Entrar no radar');
+      setBusy(button, false, 'Solicitar acesso', '↗');
     }
   });
 
@@ -120,11 +120,10 @@
     return data;
   }
 
-  function setBusy(button, busy, label) {
+  function setBusy(button, busy, label, arrow = '→') {
     if (!button) return;
     button.disabled = busy;
-    button.style.opacity = busy ? '.65' : '1';
-    const arrow = busy ? '' : ' <span>→</span>';
-    button.innerHTML = label + arrow;
+    button.style.opacity = busy ? '.62' : '1';
+    button.innerHTML = busy ? label : `${label} <span>${arrow}</span>`;
   }
 })();
