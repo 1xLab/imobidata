@@ -53,20 +53,20 @@
       ]
     },
     broker: {
-      label: 'CORRETOR',
+      label: 'INDEXAÇÃO DE CORRETOR',
       endpoint: '/api/broker.php',
-      source: 'landing_broker_conversation',
-      successTitle: 'Seu perfil foi registrado.',
-      successText: 'Agora sabemos em que contexto faz sentido chamar você quando uma missão exigir conhecimento específico.',
+      source: 'landing_broker_index',
+      successTitle: 'Suas fontes entraram na fila de indexação.',
+      successText: 'A ImobiData vai analisar as fontes indicadas, identificar os imóveis disponíveis e preparar esse estoque para cruzamento com missões compatíveis. A coleta efetiva depende da disponibilidade técnica e das políticas de acesso de cada fonte.',
       steps: [
         { key: 'name', prompt: 'Como você se chama?', hint: 'Nome profissional.' },
-        { key: 'city', prompt: 'Em qual cidade você atua de verdade?', hint: 'Comece pela praça em que você tem presença real.' },
-        { key: 'neighborhoods', prompt: 'Quais bairros ou regiões você conhece melhor?', hint: 'Opcional, mas ajuda muito a direcionar oportunidades.', optional: true },
-        { key: 'segments', prompt: 'Em que tipo de imóvel ou cliente você é mais forte?', hint: 'Ex.: médio padrão, lançamentos, alto padrão, locação, comercial...', optional: true },
-        { key: 'price_range', prompt: 'Qual faixa de preço você atende com mais frequência?', hint: 'Ex.: R$ 500 mil a R$ 1,2 milhão.', optional: true },
         { key: 'creci', prompt: 'Quer informar seu CRECI?', hint: 'Opcional nesta etapa.', optional: true },
-        { key: 'whatsapp', prompt: 'Qual WhatsApp devemos usar quando aparecer uma missão compatível?', hint: 'DDD + número.' },
-        { key: 'consent', prompt: 'Podemos entrar em contato sobre missões e oportunidades de colaboração?', options: [
+        { key: 'source_urls', prompt: 'Onde seus imóveis já estão publicados?', hint: 'Cole um ou mais links: seu perfil em portais, seu site ou sua página no site da imobiliária. Um link por linha.', multiline: true, min: 8 },
+        { key: 'indexing_authorization', prompt: 'Você confirma que essas fontes são públicas e autoriza a ImobiData a analisá-las para identificar seus imóveis e cruzá-los com missões compatíveis?', options: [
+          { label: 'Sim, autorizo a análise', value: '1' }, { label: 'Não', value: '0' }
+        ], requireYes: true },
+        { key: 'whatsapp', prompt: 'Qual WhatsApp devemos usar para falar com você quando houver uma missão compatível?', hint: 'DDD + número.' },
+        { key: 'consent', prompt: 'Podemos entrar em contato sobre a indexação e oportunidades relacionadas às missões?', options: [
           { label: 'Sim, autorizo', value: '1' }, { label: 'Não', value: '0' }
         ], requireYes: true }
       ]
@@ -177,7 +177,9 @@
       return;
     }
     if (step.min && value.length < step.min) {
-      addMessage('assistant', 'Conte um pouco mais. Quanto melhor o contexto, melhor a missão.');
+      addMessage('assistant', state.type === 'broker' && step.key === 'source_urls'
+        ? 'Envie pelo menos um link completo onde seus imóveis estão publicados.'
+        : 'Conte um pouco mais. Quanto melhor o contexto, melhor a missão.');
       input.focus();
       return;
     }
