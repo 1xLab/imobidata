@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#080806">
-  <meta name="description" content="ImobiData é uma plataforma de inteligência imobiliária orientada por demanda. Uma missão reúne os critérios de busca e orienta a pesquisa das ofertas disponíveis no mercado.">
-  <meta property="og:title" content="ImobiData | Inteligência imobiliária orientada por demanda">
-  <meta property="og:description" content="Crie uma missão imobiliária e pesquise o mercado a partir do imóvel procurado, não de um catálogo específico.">
+  <meta name="description" content="A ImobiData pesquisa anúncios imobiliários publicados em diferentes fontes a partir dos critérios informados pelo cliente e organiza as opções mais compatíveis com a busca.">
+  <meta property="og:title" content="ImobiData | Pesquisa imobiliária orientada por demanda">
+  <meta property="og:description" content="Descreva o imóvel que procura. A ImobiData pesquisa diferentes fontes do mercado e organiza as ofertas mais compatíveis com a sua busca.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://imobidata.com.br/">
-  <title>ImobiData | Inteligência imobiliária orientada por demanda</title>
+  <title>ImobiData | Pesquisa imobiliária orientada por demanda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
@@ -23,8 +23,8 @@
   <header class="header" data-header>
     <a class="brand" href="#top" aria-label="ImobiData, início"><span>IMOBI</span><b>DATA</b></a>
     <nav class="nav" aria-label="Navegação principal">
-      <a href="#conceito">O conceito</a>
-      <a href="#inteligencia">Inteligência</a>
+      <a href="#conceito">Como funciona</a>
+      <a href="#inteligencia">O que é analisado</a>
       <a href="#imobiliarias">Imobiliárias</a>
       <a href="#corretores">Corretores</a>
     </nav>
@@ -38,11 +38,11 @@
       <div class="hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">IMOBIDATA</p>
-          <h1>Pesquisa imobiliária<br><em>orientada por demanda.</em></h1>
-          <p class="hero-lead">Uma Missão ImobiData reúne localização, faixa de preço, tipologia, prazo e restrições. Esses critérios orientam a pesquisa das ofertas publicadas no mercado.</p>
+          <h1>Descreva o imóvel.<br><em>A ImobiData pesquisa o mercado.</em></h1>
+          <p class="hero-lead">Em vez de começar por um catálogo, a busca começa pelo que a pessoa realmente procura. A ImobiData recebe os critérios da compra, locação ou investimento, pesquisa anúncios publicados em diferentes fontes e organiza as opções que mais combinam com essa necessidade.</p>
           <div class="hero-actions">
             <button class="gold-button" type="button" data-flow="mission">Criar uma missão <span>↗</span></button>
-            <a class="quiet-link" href="#conceito">Como funciona <span>↓</span></a>
+            <a class="quiet-link" href="#conceito">Entender como funciona <span>↓</span></a>
           </div>
         </div>
         <div class="hero-object reveal" aria-label="Mais de 3 milhões de registros imobiliários mapeados">
@@ -51,30 +51,30 @@
             <div class="object-number"><small>+</small><strong>3M</strong></div>
             <p>registros imobiliários mapeados</p>
             <div class="object-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-            <div class="object-bottom"><span>OFERTA</span><span>HISTÓRICO</span><span>DEMANDA</span></div>
+            <div class="object-bottom"><span>ANÚNCIOS</span><span>HISTÓRICO</span><span>DEMANDA</span></div>
           </div>
         </div>
       </div>
-      <div class="hero-foot reveal"><span>IMOBIDATA</span><p>A busca parte dos critérios da missão e não do estoque de um único portal.</p></div>
+      <div class="hero-foot reveal"><span>COMO A BUSCA MUDA</span><p>A mesma missão pode ser comparada com anúncios publicados em vários sites, perfis de corretores e imobiliárias.</p></div>
     </section>
 
     <section class="concept" id="conceito" data-snap="conceito">
-      <div class="concept-index reveal">01 / CONCEITO</div>
+      <div class="concept-index reveal">01 / COMO FUNCIONA</div>
       <div class="concept-copy reveal">
-        <h2>Uma missão define<br><span>o imóvel procurado.</span></h2>
-        <h2 class="concept-answer">A pesquisa verifica<br><em>onde ele aparece no mercado.</em></h2>
+        <h2>Primeiro são definidos<br><span>os critérios da busca.</span></h2>
+        <h2 class="concept-answer">Depois são pesquisados<br><em>os imóveis compatíveis.</em></h2>
       </div>
       <div class="concept-note reveal">
-        <p>Em uma busca tradicional, os filtros são aplicados ao estoque disponível dentro de um portal.</p>
-        <p>Na ImobiData, os critérios são registrados primeiro. Depois, diferentes fontes podem ser pesquisadas e comparadas a partir da mesma demanda.</p>
+        <p>Nos portais tradicionais, a pessoa abre um estoque de anúncios e aplica filtros dentro daquele site. A busca fica limitada ao que está publicado ali e à forma como aquele portal organizou os imóveis.</p>
+        <p>Na ImobiData, a necessidade é registrada primeiro. Localização, orçamento, número de quartos, vagas, prazo, preferências e restrições formam uma Missão ImobiData. Essa mesma missão pode então ser usada para pesquisar e comparar ofertas encontradas em diferentes fontes.</p>
       </div>
     </section>
 
     <section class="mission-callout" data-snap="missao">
       <div class="mission-callout-copy reveal">
         <p class="eyebrow">MISSÃO IMOBIDATA</p>
-        <h2>Descreva o imóvel<br><em>que está sendo procurado.</em></h2>
-        <p>A conversa registra os critérios relevantes da busca: localização, orçamento, características, prazo, preferências e restrições.</p>
+        <h2>Explique o que está procurando<br><em>do jeito que explicaria a uma pessoa.</em></h2>
+        <p>Não é necessário preencher uma sequência de filtros. Basta descrever a necessidade com as informações importantes. Por exemplo: “Procuro apartamento em Joinville, de preferência no América ou Atiradores, até R$ 900 mil, com três quartos, duas vagas e sem interesse em unidades térreas”.</p>
       </div>
       <button class="mission-launch reveal" type="button" data-flow="mission">
         <span>CRIAR MISSÃO</span><b>→</b>
@@ -83,29 +83,29 @@
 
     <section class="intelligence" id="inteligencia" data-snap="inteligencia">
       <div class="section-head reveal">
-        <span>02 / INTELIGÊNCIA</span>
-        <h2>O anúncio é uma publicação.<br><em>O imóvel tem uma trajetória.</em></h2>
+        <span>02 / O QUE É ANALISADO</span>
+        <h2>A ImobiData não compara apenas anúncios.<br><em>Procura entender o imóvel por trás deles.</em></h2>
       </div>
       <div class="signal-grid reveal">
-        <article><span>01</span><h3>Identidade<br>do imóvel</h3><p>Uma mesma oferta pode aparecer em diferentes sites, corretores e imobiliárias. A identificação procura relacionar essas ocorrências ao mesmo imóvel.</p></article>
-        <article><span>02</span><h3>Histórico<br>de publicação</h3><p>Preço, republicações, tempo de exposição e alterações ao longo do tempo acrescentam informação à oferta atual.</p></article>
-        <article><span>03</span><h3>Aderência<br>à missão</h3><p>As ofertas são comparadas com os critérios registrados na missão para determinar quais merecem análise.</p></article>
+        <article><span>01</span><h3>O mesmo imóvel em vários anúncios</h3><p>Um imóvel pode aparecer em mais de um portal, em perfis diferentes e até com preços ou descrições diferentes. A ImobiData procura identificar quando anúncios distintos se referem ao mesmo imóvel para evitar que repetições sejam tratadas como opções novas.</p></article>
+        <article><span>02</span><h3>Alterações ao longo do tempo</h3><p>Quando os dados estão disponíveis, a análise pode considerar mudanças de preço, republicações e tempo de exposição. Isso ajuda a entender se uma oferta acabou de entrar no mercado, se já foi anunciada antes ou se sofreu alterações relevantes.</p></article>
+        <article><span>03</span><h3>Compatibilidade com a missão</h3><p>Cada oferta encontrada é comparada com os critérios informados na missão. O objetivo é separar o que realmente atende à necessidade do que apenas aparece porque possui algumas características em comum.</p></article>
       </div>
-      <div class="intelligence-statement reveal"><span>OBJETIVO</span><blockquote>Organizar oferta dispersa<br><em>a partir de uma demanda definida.</em></blockquote></div>
+      <div class="intelligence-statement reveal"><span>RESULTADO ESPERADO</span><blockquote>Reduzir uma pesquisa espalhada em muitos anúncios<br><em>a um conjunto menor de imóveis que realmente merece ser analisado.</em></blockquote></div>
     </section>
 
     <section class="agency" id="imobiliarias" data-snap="imobiliarias">
       <div class="audience-number reveal">03</div>
       <div class="audience-copy reveal">
         <p class="eyebrow">IMOBILIÁRIAS</p>
-        <h2>Estoque institucional<br><em>conectado à demanda.</em></h2>
-        <p>A imobiliária pode indicar suas fontes oficiais de oferta e definir a forma de relacionamento com a ImobiData. Site, feed, API ou outra integração podem representar a carteira da operação.</p>
+        <h2>A ImobiData pode levar uma demanda<br><em>até a imobiliária que possui a oferta adequada.</em></h2>
+        <p>A relação com imobiliárias é institucional. A ImobiData registra a região atendida, o porte da operação e o interesse em receber demandas ou avaliar uma integração futura. Quando houver aderência, a imobiliária pode participar do atendimento com os imóveis da própria carteira.</p>
       </div>
       <div class="audience-side reveal">
         <div class="audience-list">
-          <span>FONTES OFICIAIS DE ESTOQUE</span>
-          <span>COBERTURA E EQUIPE</span>
-          <span>INTEGRAÇÃO COM A OPERAÇÃO</span>
+          <span>DEMANDAS COMPATÍVEIS COM A CARTEIRA</span>
+          <span>CONTATO COM A OPERAÇÃO RESPONSÁVEL</span>
+          <span>POSSIBILIDADE DE INTEGRAÇÃO FUTURA</span>
         </div>
         <button class="outline-button" type="button" data-flow="agency">Cadastrar imobiliária <b>↗</b></button>
       </div>
@@ -119,34 +119,34 @@
           <span>imobiliaria.com.br/corretor/seu-nome</span>
           <span>seusite.com.br/imoveis</span>
         </div>
-        <div class="index-source-foot"><span>FONTE</span><span>IMÓVEL</span><span>MISSÃO</span></div>
+        <div class="index-source-foot"><span>FONTE</span><span>ANÚNCIOS</span><span>MISSÕES</span></div>
       </div>
       <div class="broker-copy reveal">
         <p class="eyebrow">CORRETORES</p>
-        <h2>Indique onde os imóveis<br><em>já estão publicados.</em></h2>
-        <p>Perfis em portais, site próprio ou página no site da imobiliária podem ser indicados como fontes. A ImobiData identifica os anúncios vinculados ao profissional e os relaciona a missões compatíveis.</p>
-        <button class="dark-button" type="button" data-flow="broker">Indicar fontes <span>↗</span></button>
-        <p class="indexing-disclaimer">A indexação depende da disponibilidade técnica e das condições de acesso de cada fonte.</p>
+        <h2>O corretor informa onde anuncia.<br><em>A ImobiData procura os imóveis nessas fontes.</em></h2>
+        <p>Não é necessário cadastrar novamente cada imóvel. O corretor pode informar o endereço do próprio site, a página do seu perfil em um portal ou a página em que seus imóveis aparecem no site da imobiliária. A ImobiData registra essas fontes e, quando a coleta for tecnicamente possível, identifica os anúncios vinculados ao profissional.</p>
+        <button class="dark-button" type="button" data-flow="broker">Indicar onde anuncio <span>↗</span></button>
+        <p class="indexing-disclaimer">A indicação de uma página não garante que a coleta será possível. Cada fonte é analisada de acordo com sua disponibilidade técnica e suas condições de acesso.</p>
       </div>
       <div class="broker-note reveal">
-        <span>INDEXAÇÃO DE FONTES</span>
-        <strong>Sem recadastro individual dos imóveis.</strong>
-        <p>Localização, tipologia, faixa de preço e volume de oferta são obtidos dos anúncios encontrados nas fontes indicadas.</p>
+        <span>O QUE A INDEXAÇÃO PERMITE</span>
+        <strong>Relacionar a oferta já publicada às missões dos clientes.</strong>
+        <p>Depois que os anúncios são identificados, a ImobiData pode reconhecer localização, tipo de imóvel, faixa de preço e outras características diretamente nas ofertas publicadas. Quando uma missão for compatível, a plataforma consegue localizar o anúncio e o profissional responsável por ele.</p>
       </div>
     </section>
 
     <section class="closing reveal" data-snap="fechamento">
-      <p class="eyebrow">MISSÃO IMOBIDATA</p>
-      <h2>Uma busca começa<br><em>com critérios bem definidos.</em></h2>
+      <p class="eyebrow">PARA QUEM PROCURA UM IMÓVEL</p>
+      <h2>Descreva a necessidade uma vez.<br><em>A pesquisa começa a partir dela.</em></h2>
       <button class="gold-button" type="button" data-flow="mission">Criar uma missão <span>→</span></button>
     </section>
   </main>
 
   <footer class="footer">
-    <div><a class="brand footer-brand" href="#top"><span>IMOBI</span><b>DATA</b></a><p>Inteligência de dados aplicada ao mercado imobiliário.</p></div>
-    <div class="footer-company"><span>UMA EMPRESA</span><strong>MEGAWEB SOLUTIONS</strong><small>Joinville · Santa Catarina</small></div>
-    <p class="footer-legal">A ImobiData é uma plataforma de tecnologia e inteligência imobiliária da Megaweb Solutions. Atividades de intermediação, quando aplicáveis, são realizadas separadamente por profissionais ou empresas legalmente habilitados.</p>
-    <div class="footer-bottom"><span>© <?= date('Y') ?> Megaweb Solutions</span><a href="#top">Voltar ao topo ↑</a></div>
+    <div><a class="brand footer-brand" href="#top"><span>IMOBI</span><b>DATA</b></a><p>Pesquisa e inteligência de dados para o mercado imobiliário.</p></div>
+    <div class="footer-company"><span>IMOBIDATA</span><strong>INTELIGÊNCIA IMOBILIÁRIA</strong><small>Joinville · Santa Catarina</small></div>
+    <p class="footer-legal">A ImobiData é uma plataforma de tecnologia e inteligência imobiliária. A plataforma pesquisa, organiza e relaciona informações de mercado e demandas de clientes. Quando houver atividade de intermediação imobiliária, ela será realizada separadamente por profissional ou empresa legalmente habilitados.</p>
+    <div class="footer-bottom"><span>© <?= date('Y') ?> ImobiData. Todos os direitos reservados.</span><a href="#top">Voltar ao topo ↑</a></div>
   </footer>
 </div>
 
@@ -168,7 +168,7 @@
   </section>
 </div>
 
-<script src="/assets/js/site.js?v=6" defer></script>
+<script src="/assets/js/site.js?v=7" defer></script>
 <script src="/assets/js/scroll-scenes.js?v=1" defer></script>
 </body>
 </html>
