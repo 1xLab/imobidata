@@ -1,0 +1,9 @@
+html{scroll-padding-top:70px}
+[data-snap]{scroll-margin-top:70px}
+html.is-scene-moving{scroll-behavior:smooth}
+@media(max-width:899px),(hover:none),(pointer:coarse){
+  [data-snap]{scroll-margin-top:74px}
+}
+@media(prefers-reduced-motion:reduce){
+  html.is-scene-moving{scroll-behavior:auto}
+}
