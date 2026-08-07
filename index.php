@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/assets/css/site.css?v=4">
   <link rel="stylesheet" href="/assets/css/scroll-scenes.css?v=1">
   <link rel="stylesheet" href="/assets/css/indexing.css?v=1">
+  <link rel="stylesheet" href="/assets/css/metric.css?v=1">
 </head>
 <body>
 <div class="site" id="top">
@@ -45,11 +46,14 @@
             <a class="quiet-link" href="#conceito">Entender como funciona <span>↓</span></a>
           </div>
         </div>
-        <div class="hero-object reveal" aria-label="Mais de 3 milhões de registros imobiliários mapeados">
+        <div class="hero-object reveal" aria-label="15 milhões de imóveis mapeados">
           <div class="object-frame">
             <span class="object-label">BASE MAPEADA</span>
-            <div class="object-number"><small>+</small><strong>3M</strong></div>
-            <p>registros imobiliários mapeados</p>
+            <div class="object-volume">
+              <strong>15</strong>
+              <span>MILHÕES</span>
+              <p>de imóveis mapeados</p>
+            </div>
             <div class="object-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
             <div class="object-bottom"><span>ANÚNCIOS</span><span>HISTÓRICO</span><span>DEMANDA</span></div>
           </div>
