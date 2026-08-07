@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#080806">
-  <meta name="description" content="ImobiData transforma intenção em demanda estruturada e pesquisa o mercado imobiliário com contexto.">
-  <meta property="og:title" content="ImobiData | Faça o mercado procurar por você">
-  <meta property="og:description" content="Descreva o imóvel que procura. A ImobiData organiza a demanda e pesquisa milhões de registros imobiliários.">
+  <meta name="description" content="ImobiData é uma plataforma de inteligência imobiliária orientada por demanda. Uma missão reúne os critérios de busca e orienta a pesquisa das ofertas disponíveis no mercado.">
+  <meta property="og:title" content="ImobiData | Inteligência imobiliária orientada por demanda">
+  <meta property="og:description" content="Crie uma missão imobiliária e pesquise o mercado a partir do imóvel procurado, não de um catálogo específico.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://imobidata.com.br/">
-  <title>ImobiData | Faça o mercado procurar por você</title>
+  <title>ImobiData | Inteligência imobiliária orientada por demanda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
@@ -34,20 +34,20 @@
   <main>
     <section class="hero" data-snap="hero">
       <div class="hero-noise" aria-hidden="true"></div>
-      <div class="hero-meta reveal"><span>REAL ESTATE INTELLIGENCE</span><span>JOINVILLE · SC</span></div>
+      <div class="hero-meta reveal"><span>INTELIGÊNCIA IMOBILIÁRIA</span><span>JOINVILLE · SC</span></div>
       <div class="hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">IMOBIDATA</p>
-          <h1>O mercado não deveria<br><em>começar pelo imóvel.</em></h1>
-          <p class="hero-lead">Comece pelo que você realmente procura. A ImobiData transforma intenção em uma missão estruturada e faz o mercado trabalhar a partir dela.</p>
+          <h1>Pesquisa imobiliária<br><em>orientada por demanda.</em></h1>
+          <p class="hero-lead">Uma Missão ImobiData reúne localização, faixa de preço, tipologia, prazo e restrições. Esses critérios orientam a pesquisa das ofertas publicadas no mercado.</p>
           <div class="hero-actions">
-            <button class="gold-button" type="button" data-flow="mission">Conversar com a ImobiData <span>↗</span></button>
-            <a class="quiet-link" href="#conceito">Entender a lógica <span>↓</span></a>
+            <button class="gold-button" type="button" data-flow="mission">Criar uma missão <span>↗</span></button>
+            <a class="quiet-link" href="#conceito">Como funciona <span>↓</span></a>
           </div>
         </div>
         <div class="hero-object reveal" aria-label="Mais de 3 milhões de registros imobiliários mapeados">
           <div class="object-frame">
-            <span class="object-label">MARKET MEMORY</span>
+            <span class="object-label">BASE MAPEADA</span>
             <div class="object-number"><small>+</small><strong>3M</strong></div>
             <p>registros imobiliários mapeados</p>
             <div class="object-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
@@ -55,90 +55,90 @@
           </div>
         </div>
       </div>
-      <div class="hero-foot reveal"><span>DEMAND FIRST</span><p>Mais anúncios não significam mais clareza. Contexto significa.</p></div>
+      <div class="hero-foot reveal"><span>IMOBIDATA</span><p>A busca parte dos critérios da missão e não do estoque de um único portal.</p></div>
     </section>
 
     <section class="concept" id="conceito" data-snap="conceito">
       <div class="concept-index reveal">01 / CONCEITO</div>
       <div class="concept-copy reveal">
-        <h2>Portais organizam<br><span>o que está à venda.</span></h2>
-        <h2 class="concept-answer">Nós organizamos<br><em>o que alguém quer comprar.</em></h2>
+        <h2>Uma missão define<br><span>o imóvel procurado.</span></h2>
+        <h2 class="concept-answer">A pesquisa verifica<br><em>onde ele aparece no mercado.</em></h2>
       </div>
       <div class="concept-note reveal">
-        <p>Uma busca comum pergunta quais filtros você deseja aplicar ao estoque de um site.</p>
-        <p>A ImobiData pergunta outra coisa: <strong>qual decisão você está tentando tomar?</strong></p>
+        <p>Em uma busca tradicional, os filtros são aplicados ao estoque disponível dentro de um portal.</p>
+        <p>Na ImobiData, os critérios são registrados primeiro. Depois, diferentes fontes podem ser pesquisadas e comparadas a partir da mesma demanda.</p>
       </div>
     </section>
 
     <section class="mission-callout" data-snap="missao">
       <div class="mission-callout-copy reveal">
         <p class="eyebrow">MISSÃO IMOBIDATA</p>
-        <h2>Explique como falaria<br><em>com um especialista.</em></h2>
-        <p>Preço, região, prazo, preferências, restrições e aquilo que faria você desistir. Sem vinte filtros. Sem cadastro antes da conversa.</p>
+        <h2>Descreva o imóvel<br><em>que está sendo procurado.</em></h2>
+        <p>A conversa registra os critérios relevantes da busca: localização, orçamento, características, prazo, preferências e restrições.</p>
       </div>
       <button class="mission-launch reveal" type="button" data-flow="mission">
-        <span>INICIAR CONVERSA</span><b>→</b>
+        <span>CRIAR MISSÃO</span><b>→</b>
       </button>
     </section>
 
     <section class="intelligence" id="inteligencia" data-snap="inteligencia">
       <div class="section-head reveal">
         <span>02 / INTELIGÊNCIA</span>
-        <h2>Um anúncio mostra o agora.<br><em>Dados mostram a trajetória.</em></h2>
+        <h2>O anúncio é uma publicação.<br><em>O imóvel tem uma trajetória.</em></h2>
       </div>
       <div class="signal-grid reveal">
-        <article><span>01</span><h3>Mesma oferta.<br>Várias versões.</h3><p>Fontes diferentes podem apresentar o mesmo ativo com preço, descrição e momento distintos.</p></article>
-        <article><span>02</span><h3>Preço também<br>tem memória.</h3><p>Reduções, republicações e tempo de exposição alteram a leitura de uma oportunidade.</p></article>
-        <article><span>03</span><h3>Demanda também<br>é dado.</h3><p>Quem procura, o que procura, quanto aceita pagar e quando pretende agir formam um mapa do mercado.</p></article>
+        <article><span>01</span><h3>Identidade<br>do imóvel</h3><p>Uma mesma oferta pode aparecer em diferentes sites, corretores e imobiliárias. A identificação procura relacionar essas ocorrências ao mesmo imóvel.</p></article>
+        <article><span>02</span><h3>Histórico<br>de publicação</h3><p>Preço, republicações, tempo de exposição e alterações ao longo do tempo acrescentam informação à oferta atual.</p></article>
+        <article><span>03</span><h3>Aderência<br>à missão</h3><p>As ofertas são comparadas com os critérios registrados na missão para determinar quais merecem análise.</p></article>
       </div>
-      <div class="intelligence-statement reveal"><span>IMOBIDATA PRINCIPLE</span><blockquote>Menos opções.<br><em>Mais motivo para cada opção existir.</em></blockquote></div>
+      <div class="intelligence-statement reveal"><span>OBJETIVO</span><blockquote>Organizar oferta dispersa<br><em>a partir de uma demanda definida.</em></blockquote></div>
     </section>
 
     <section class="agency" id="imobiliarias" data-snap="imobiliarias">
       <div class="audience-number reveal">03</div>
       <div class="audience-copy reveal">
-        <p class="eyebrow">PARA IMOBILIÁRIAS</p>
-        <h2>Demanda qualificada<br><em>para uma operação inteira.</em></h2>
-        <p>Imobiliária é estrutura: carteira, equipe, cobertura territorial, distribuição, SLA e integração. A relação com a ImobiData é institucional.</p>
+        <p class="eyebrow">IMOBILIÁRIAS</p>
+        <h2>Estoque institucional<br><em>conectado à demanda.</em></h2>
+        <p>A imobiliária pode indicar suas fontes oficiais de oferta e definir a forma de relacionamento com a ImobiData. Site, feed, API ou outra integração podem representar a carteira da operação.</p>
       </div>
       <div class="audience-side reveal">
         <div class="audience-list">
-          <span>CARTEIRA E COBERTURA</span>
-          <span>DISTRIBUIÇÃO PARA EQUIPE</span>
-          <span>INTEGRAÇÃO E RECORRÊNCIA</span>
+          <span>FONTES OFICIAIS DE ESTOQUE</span>
+          <span>COBERTURA E EQUIPE</span>
+          <span>INTEGRAÇÃO COM A OPERAÇÃO</span>
         </div>
-        <button class="outline-button" type="button" data-flow="agency">Conversar como imobiliária <b>↗</b></button>
+        <button class="outline-button" type="button" data-flow="agency">Cadastrar imobiliária <b>↗</b></button>
       </div>
     </section>
 
     <section class="broker broker-indexing" id="corretores" data-snap="corretores">
       <div class="index-source-visual reveal" aria-label="Fontes públicas de anúncios para indexação">
-        <span class="index-source-kicker">LISTING SOURCES</span>
+        <span class="index-source-kicker">FONTES DE ANÚNCIOS</span>
         <div class="source-stack">
           <span>portal.com.br/corretor/seu-perfil</span>
           <span>imobiliaria.com.br/corretor/seu-nome</span>
           <span>seusite.com.br/imoveis</span>
         </div>
-        <div class="index-source-foot"><span>INDEX</span><span>MAP</span><span>MATCH</span></div>
+        <div class="index-source-foot"><span>FONTE</span><span>IMÓVEL</span><span>MISSÃO</span></div>
       </div>
       <div class="broker-copy reveal">
-        <p class="eyebrow">PARA CORRETORES</p>
-        <h2>Você já anuncia.<br><em>Nós indexamos.</em></h2>
-        <p>Indique onde seus imóveis já estão publicados: seu perfil em portais, seu próprio site ou sua página no portal da imobiliária. A ImobiData passa a mapear essas fontes e pode cruzar os imóveis identificados com missões compatíveis.</p>
-        <button class="dark-button" type="button" data-flow="broker">Indicar onde anuncio <span>↗</span></button>
-        <p class="indexing-disclaimer">Você não precisa recadastrar imóvel por imóvel. A indexação depende da disponibilidade técnica e das políticas de acesso de cada fonte.</p>
+        <p class="eyebrow">CORRETORES</p>
+        <h2>Indique onde os imóveis<br><em>já estão publicados.</em></h2>
+        <p>Perfis em portais, site próprio ou página no site da imobiliária podem ser indicados como fontes. A ImobiData identifica os anúncios vinculados ao profissional e os relaciona a missões compatíveis.</p>
+        <button class="dark-button" type="button" data-flow="broker">Indicar fontes <span>↗</span></button>
+        <p class="indexing-disclaimer">A indexação depende da disponibilidade técnica e das condições de acesso de cada fonte.</p>
       </div>
       <div class="broker-note reveal">
-        <span>NÃO DESCREVA SEU ESTOQUE.</span>
-        <strong>Mostre onde ele já existe.</strong>
-        <p>Bairros, tipologias, faixa de preço e volume de oferta podem ser inferidos a partir dos próprios anúncios. O perfil comercial passa a ser observado, não declarado.</p>
+        <span>INDEXAÇÃO DE FONTES</span>
+        <strong>Sem recadastro individual dos imóveis.</strong>
+        <p>Localização, tipologia, faixa de preço e volume de oferta são obtidos dos anúncios encontrados nas fontes indicadas.</p>
       </div>
     </section>
 
     <section class="closing reveal" data-snap="fechamento">
-      <p class="eyebrow">IMOBIDATA</p>
-      <h2>O imóvel certo pode já estar no mercado.<br><em>A diferença é saber como procurar.</em></h2>
-      <button class="gold-button" type="button" data-flow="mission">Criar minha missão <span>→</span></button>
+      <p class="eyebrow">MISSÃO IMOBIDATA</p>
+      <h2>Uma busca começa<br><em>com critérios bem definidos.</em></h2>
+      <button class="gold-button" type="button" data-flow="mission">Criar uma missão <span>→</span></button>
     </section>
   </main>
 
@@ -168,7 +168,7 @@
   </section>
 </div>
 
-<script src="/assets/js/site.js?v=5" defer></script>
+<script src="/assets/js/site.js?v=6" defer></script>
 <script src="/assets/js/scroll-scenes.js?v=1" defer></script>
 </body>
 </html>
