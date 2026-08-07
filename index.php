@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/site.css?v=4">
+  <link rel="stylesheet" href="/assets/css/scroll-scenes.css?v=1">
 </head>
 <body>
 <div class="site" id="top">
@@ -30,7 +31,7 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" data-snap="hero">
       <div class="hero-noise" aria-hidden="true"></div>
       <div class="hero-meta reveal"><span>REAL ESTATE INTELLIGENCE</span><span>JOINVILLE · SC</span></div>
       <div class="hero-grid">
@@ -56,7 +57,7 @@
       <div class="hero-foot reveal"><span>DEMAND FIRST</span><p>Mais anúncios não significam mais clareza. Contexto significa.</p></div>
     </section>
 
-    <section class="concept" id="conceito">
+    <section class="concept" id="conceito" data-snap="conceito">
       <div class="concept-index reveal">01 / CONCEITO</div>
       <div class="concept-copy reveal">
         <h2>Portais organizam<br><span>o que está à venda.</span></h2>
@@ -68,7 +69,7 @@
       </div>
     </section>
 
-    <section class="mission-callout">
+    <section class="mission-callout" data-snap="missao">
       <div class="mission-callout-copy reveal">
         <p class="eyebrow">MISSÃO IMOBIDATA</p>
         <h2>Explique como falaria<br><em>com um especialista.</em></h2>
@@ -79,7 +80,7 @@
       </button>
     </section>
 
-    <section class="intelligence" id="inteligencia">
+    <section class="intelligence" id="inteligencia" data-snap="inteligencia">
       <div class="section-head reveal">
         <span>02 / INTELIGÊNCIA</span>
         <h2>Um anúncio mostra o agora.<br><em>Dados mostram a trajetória.</em></h2>
@@ -92,7 +93,7 @@
       <div class="intelligence-statement reveal"><span>IMOBIDATA PRINCIPLE</span><blockquote>Menos opções.<br><em>Mais motivo para cada opção existir.</em></blockquote></div>
     </section>
 
-    <section class="agency" id="imobiliarias">
+    <section class="agency" id="imobiliarias" data-snap="imobiliarias">
       <div class="audience-number reveal">03</div>
       <div class="audience-copy reveal">
         <p class="eyebrow">PARA IMOBILIÁRIAS</p>
@@ -109,7 +110,7 @@
       </div>
     </section>
 
-    <section class="broker" id="corretores">
+    <section class="broker" id="corretores" data-snap="corretores">
       <div class="broker-mark reveal" aria-hidden="true"><span>LOCAL</span><span>KNOWLEDGE</span></div>
       <div class="broker-copy reveal">
         <p class="eyebrow">PARA CORRETORES</p>
@@ -120,7 +121,7 @@
       <div class="broker-note reveal"><span>NÃO É UMA IMOBILIÁRIA MENOR.</span><p>É outra unidade econômica, outra capacidade operacional e outra relação comercial.</p></div>
     </section>
 
-    <section class="closing reveal">
+    <section class="closing reveal" data-snap="fechamento">
       <p class="eyebrow">IMOBIDATA</p>
       <h2>O imóvel certo pode já estar no mercado.<br><em>A diferença é saber como procurar.</em></h2>
       <button class="gold-button" type="button" data-flow="mission">Criar minha missão <span>→</span></button>
@@ -154,5 +155,6 @@
 </div>
 
 <script src="/assets/js/site.js?v=4" defer></script>
+<script src="/assets/js/scroll-scenes.js?v=1" defer></script>
 </body>
 </html>
